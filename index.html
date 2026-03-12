@@ -1,533 +1,221 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>متجر فجر</title>
-  <style>
-    *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>متجر فجر</title>
 
-    :root{
-      --bg:#081321;
-      --bg2:#0d1b2f;
-      --card:#10233d;
-      --card2:#163154;
-      --text:#ffffff;
-      --muted:#c8d2e0;
-      --orange:#ff8a00;
-      --orange2:#ff5e00;
-      --gold:#ffd54a;
-      --danger:#ff4d6d;
-      --line:rgba(255,255,255,.12);
-      --shadow:0 10px 30px rgba(0,0,0,.35);
-    }
+<style>
 
-    body{
-      font-family: Arial, sans-serif;
-      color:var(--text);
-      min-height:100vh;
-      background:
-        radial-gradient(circle at top center, rgba(255,120,0,.35), transparent 24%),
-        radial-gradient(circle at 20% 15%, rgba(255,170,80,.10), transparent 18%),
-        radial-gradient(circle at 80% 20%, rgba(255,90,0,.09), transparent 14%),
-        linear-gradient(180deg, #122a52 0%, #0b1a2a 38%, #0a1220 100%);
-      overflow-x:hidden;
-      position:relative;
-    }
+body{
+font-family:Arial;
+background:#0b1a2a;
+color:white;
+text-align:center;
+margin:0;
+padding:0;
+}
 
-    /* نجوم */
-    body::before{
-      content:"";
-      position:fixed;
-      inset:0;
-      pointer-events:none;
-      background-image:
-        radial-gradient(2px 2px at 8% 14%, rgba(255,255,255,.95), transparent 55%),
-        radial-gradient(1.5px 1.5px at 22% 8%, rgba(255,255,255,.8), transparent 55%),
-        radial-gradient(2px 2px at 34% 18%, rgba(255,255,255,.9), transparent 55%),
-        radial-gradient(1.5px 1.5px at 47% 10%, rgba(255,255,255,.7), transparent 55%),
-        radial-gradient(2px 2px at 58% 15%, rgba(255,255,255,.8), transparent 55%),
-        radial-gradient(1.5px 1.5px at 72% 9%, rgba(255,255,255,.9), transparent 55%),
-        radial-gradient(2px 2px at 85% 16%, rgba(255,255,255,.8), transparent 55%),
-        radial-gradient(1.5px 1.5px at 91% 7%, rgba(255,255,255,.7), transparent 55%),
-        radial-gradient(2px 2px at 13% 32%, rgba(255,255,255,.8), transparent 55%),
-        radial-gradient(1.5px 1.5px at 29% 27%, rgba(255,255,255,.85), transparent 55%),
-        radial-gradient(2px 2px at 63% 30%, rgba(255,255,255,.75), transparent 55%),
-        radial-gradient(1.5px 1.5px at 79% 25%, rgba(255,255,255,.85), transparent 55%);
-      opacity:.9;
-      z-index:0;
-    }
+header{
+padding:20px;
+font-size:40px;
+color:#ffb347;
+}
 
-    /* جذور / توهج زخرفي */
-    body::after{
-      content:"";
-      position:fixed;
-      inset:auto 0 0 0;
-      height:220px;
-      pointer-events:none;
-      background:
-        radial-gradient(circle at 15% 100%, rgba(255,110,0,.35), transparent 32%),
-        radial-gradient(circle at 50% 100%, rgba(255,145,0,.25), transparent 28%),
-        radial-gradient(circle at 85% 100%, rgba(255,90,0,.30), transparent 30%);
-      filter:blur(10px);
-      z-index:0;
-    }
+.products{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+padding:20px;
+}
 
-    .topbar{
-      position:sticky;
-      top:0;
-      z-index:50;
-      backdrop-filter: blur(12px);
-      background:rgba(5,10,18,.7);
-      border-bottom:1px solid var(--line);
-    }
+.card{
+background:#142a44;
+padding:15px;
+border-radius:15px;
+width:230px;
+box-shadow:0 0 15px rgba(0,0,0,0.4);
+}
 
-    .topbar-inner{
-      max-width:1400px;
-      margin:auto;
-      padding:14px 18px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-    }
+.card img{
+width:100%;
+border-radius:10px;
+}
 
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      font-size:30px;
-      font-weight:700;
-      color:#ffb14a;
-      text-shadow:0 0 10px rgba(255,140,0,.25);
-    }
+.price{
+color:#ffd700;
+font-size:20px;
+margin:10px 0;
+}
 
-    .brand-badge{
-      width:48px;
-      height:48px;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:linear-gradient(135deg,var(--orange),var(--orange2));
-      box-shadow:0 0 22px rgba(255,120,0,.35);
-      font-size:24px;
-    }
+button{
+background:#ff8a00;
+border:none;
+padding:10px 15px;
+border-radius:8px;
+cursor:pointer;
+color:white;
+font-size:14px;
+}
 
-    .actions{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      flex-wrap:wrap;
-    }
+button:hover{
+background:#ff6a00;
+}
 
-    .action-btn{
-      border:none;
-      cursor:pointer;
-      border-radius:14px;
-      padding:12px 14px;
-      background:rgba(255,255,255,.08);
-      color:#fff;
-      box-shadow:var(--shadow);
-      transition:.2s ease;
-      font-size:15px;
-    }
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 20px;
+background:#081321;
+}
 
-    .action-btn:hover{
-      transform:translateY(-2px);
-      background:rgba(255,255,255,.14);
-    }
+.cart{
+cursor:pointer;
+font-size:18px;
+}
 
-    .cart-btn{
-      background:linear-gradient(135deg,var(--orange),var(--orange2));
-      color:#fff;
-      font-weight:700;
-      position:relative;
-    }
+.cart-box{
+position:fixed;
+top:0;
+left:0;
+width:300px;
+height:100%;
+background:#081321;
+padding:20px;
+transform:translateX(-100%);
+transition:0.3s;
+}
 
-    .badge{
-      position:absolute;
-      top:-8px;
-      left:-8px;
-      min-width:24px;
-      height:24px;
-      padding:0 6px;
-      border-radius:999px;
-      background:#ff315a;
-      color:#fff;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:12px;
-      font-weight:700;
-      border:2px solid #081321;
-    }
+.cart-box.active{
+transform:translateX(0);
+}
 
-    .hero{
-      position:relative;
-      z-index:1;
-      max-width:1200px;
-      margin:32px auto 8px;
-      padding:0 18px;
-      text-align:center;
-    }
+.cart-item{
+margin:10px 0;
+}
 
-    .hero h1{
-      font-size:52px;
-      margin-bottom:10px;
-      color:#fff;
-      text-shadow:0 0 20px rgba(255,145,0,.18);
-    }
+.whatsapp{
+margin-top:20px;
+background:#25D366;
+}
 
-    .hero p{
-      color:var(--muted);
-      font-size:18px;
-      line-height:1.8;
-      max-width:900px;
-      margin:0 auto 20px;
-    }
+</style>
+</head>
 
-    .info-strip{
-      display:flex;
-      justify-content:center;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-top:14px;
-    }
+<body>
 
-    .pill{
-      background:rgba(255,255,255,.08);
-      border:1px solid var(--line);
-      color:#fff;
-      padding:10px 14px;
-      border-radius:999px;
-      font-size:14px;
-    }
+<div class="topbar">
+<div>🌅 متجر فجر</div>
+<div class="cart" onclick="toggleCart()">🛒 السلة (<span id="count">0</span>)</div>
+</div>
 
-    .products-section{
-      position:relative;
-      z-index:1;
-      max-width:1400px;
-      margin:20px auto 60px;
-      padding:0 18px;
-    }
+<div class="cart-box" id="cartBox">
+<h2>السلة</h2>
+<div id="cartItems"></div>
+<p>الإجمالي: <span id="total">0</span> ريال</p>
 
-    .section-title{
-      font-size:32px;
-      margin-bottom:20px;
-      text-align:center;
-      color:#fff;
-    }
+<button class="whatsapp" onclick="sendOrder()">إرسال الطلب واتساب</button>
+</div>
 
-    .products{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:22px;
-    }
+<header>المنتجات</header>
 
-    .card{
-      background:linear-gradient(180deg, rgba(20,42,68,.96), rgba(16,35,61,.96));
-      border:1px solid var(--line);
-      border-radius:22px;
-      padding:16px;
-      box-shadow:var(--shadow);
-      transition:.25s ease;
-      position:relative;
-      overflow:hidden;
-    }
+<div class="products">
 
-    .card:hover{
-      transform:translateY(-4px);
-      box-shadow:0 14px 30px rgba(0,0,0,.42);
-    }
+<div class="card">
+<img src="fajr-al-bidaya.jpeg">
+<h3>البداية</h3>
+<p class="price">39 ريال</p>
+<button onclick="addCart('البداية',39)">إضافة للسلة</button>
+</div>
 
-    .fav-btn{
-      position:absolute;
-      top:14px;
-      left:14px;
-      width:42px;
-      height:42px;
-      border:none;
-      border-radius:50%;
-      cursor:pointer;
-      background:rgba(0,0,0,.38);
-      color:#fff;
-      font-size:20px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      border:1px solid rgba(255,255,255,.18);
-      transition:.2s ease;
-      z-index:2;
-    }
+<div class="card">
+<img src="fajr-arabian-dawn.jpeg">
+<h3>الفجر العربي</h3>
+<p class="price">49 ريال</p>
+<button onclick="addCart('الفجر العربي',49)">إضافة للسلة</button>
+</div>
 
-    .fav-btn.active{
-      background:rgba(255,77,109,.2);
-      color:#ff7b97;
-      border-color:rgba(255,77,109,.45);
-    }
+<div class="card">
+<img src="fajr-icy-fresh.jpeg">
+<h3>آيسي فريش</h3>
+<p class="price">59 ريال</p>
+<button onclick="addCart('آيسي فريش',59)">إضافة للسلة</button>
+</div>
 
-    .img-wrap{
-      width:100%;
-      aspect-ratio:4/5;
-      border-radius:18px;
-      overflow:hidden;
-      background:#0b1a2a;
-      margin-bottom:14px;
-    }
+<div class="card">
+<img src="fajr-dawn-rise.jpeg">
+<h3>الفجر المشتعل</h3>
+<p class="price">99 ريال</p>
+<button onclick="addCart('الفجر المشتعل',99)">إضافة للسلة</button>
+</div>
 
-    .img-wrap img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-    }
+</div>
 
-    .card h3{
-      font-size:24px;
-      margin-bottom:10px;
-    }
+<script>
 
-    .card p.desc{
-      color:var(--muted);
-      font-size:14px;
-      line-height:1.7;
-      min-height:52px;
-      margin-bottom:12px;
-    }
+let cart=[]
 
-    .price{
-      color:var(--gold);
-      font-size:28px;
-      font-weight:700;
-      margin-bottom:14px;
-    }
+function addCart(name,price){
 
-    .card-actions{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-    }
+cart.push({name,price})
 
-    .btn{
-      flex:1;
-      min-width:110px;
-      border:none;
-      cursor:pointer;
-      padding:12px 14px;
-      border-radius:12px;
-      font-size:15px;
-      font-weight:700;
-      transition:.2s ease;
-    }
+updateCart()
 
-    .btn-primary{
-      background:linear-gradient(135deg,var(--orange),var(--orange2));
-      color:#fff;
-    }
+}
 
-    .btn-primary:hover{
-      transform:translateY(-2px);
-    }
+function updateCart(){
 
-    .btn-secondary{
-      background:rgba(255,255,255,.08);
-      color:#fff;
-      border:1px solid var(--line);
-    }
+let items=document.getElementById("cartItems")
+let total=0
 
-    .btn-secondary:hover{
-      background:rgba(255,255,255,.13);
-    }
+items.innerHTML=""
 
-    /* Drawer */
-    .drawer-overlay{
-      position:fixed;
-      inset:0;
-      background:rgba(0,0,0,.65);
-      display:none;
-      z-index:100;
-    }
+cart.forEach(p=>{
 
-    .drawer-overlay.show{
-      display:block;
-    }
+total+=p.price
 
-    .drawer{
-      position:fixed;
-      top:0;
-      left:0;
-      width:min(420px, 100%);
-      height:100%;
-      background:#0d1b2f;
-      border-right:1px solid var(--line);
-      box-shadow:var(--shadow);
-      transform:translateX(-100%);
-      transition:.25s ease;
-      z-index:101;
-      display:flex;
-      flex-direction:column;
-    }
+items.innerHTML+=`<div class="cart-item">${p.name} - ${p.price} ريال</div>`
 
-    .drawer.show{
-      transform:translateX(0);
-    }
+})
 
-    .drawer-header{
-      padding:18px;
-      border-bottom:1px solid var(--line);
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:10px;
-    }
+document.getElementById("total").innerText=total
+document.getElementById("count").innerText=cart.length
 
-    .drawer-title{
-      font-size:24px;
-      font-weight:700;
-    }
+}
 
-    .close-btn{
-      border:none;
-      cursor:pointer;
-      width:42px;
-      height:42px;
-      border-radius:50%;
-      background:rgba(255,255,255,.08);
-      color:#fff;
-      font-size:20px;
-    }
+function toggleCart(){
 
-    .drawer-body{
-      flex:1;
-      overflow:auto;
-      padding:18px;
-    }
+document.getElementById("cartBox").classList.toggle("active")
 
-    .cart-empty{
-      text-align:center;
-      color:var(--muted);
-      margin-top:50px;
-      line-height:2;
-    }
+}
 
-    .cart-item{
-      display:flex;
-      gap:12px;
-      align-items:center;
-      background:rgba(255,255,255,.05);
-      border:1px solid var(--line);
-      border-radius:16px;
-      padding:10px;
-      margin-bottom:12px;
-    }
+function sendOrder(){
 
-    .cart-item img{
-      width:72px;
-      height:72px;
-      object-fit:cover;
-      border-radius:12px;
-      flex-shrink:0;
-    }
+if(cart.length==0){
+alert("السلة فارغة")
+return
+}
 
-    .cart-item-info{
-      flex:1;
-    }
+let message="طلب جديد من متجر فجر:%0A"
 
-    .cart-item-info h4{
-      font-size:17px;
-      margin-bottom:6px;
-    }
+cart.forEach(p=>{
+message+=`${p.name} - ${p.price} ريال%0A`
+})
 
-    .cart-item-info p{
-      color:var(--gold);
-      font-weight:700;
-    }
+let total=cart.reduce((a,b)=>a+b.price,0)
 
-    .qty-row{
-      display:flex;
-      align-items:center;
-      gap:8px;
-      margin-top:8px;
-      flex-wrap:wrap;
-    }
+message+=`%0Aالإجمالي: ${total} ريال`
+message+=`%0Aالدفع تحويل بنكي`
+message+=`%0Aالآيبان: SA6430100991104941618846`
 
-    .qty-btn{
-      width:32px;
-      height:32px;
-      border:none;
-      border-radius:10px;
-      cursor:pointer;
-      background:rgba(255,255,255,.09);
-      color:#fff;
-      font-size:18px;
-    }
+window.open(`https://wa.me/966548659564?text=${message}`)
 
-    .remove-btn{
-      border:none;
-      cursor:pointer;
-      background:rgba(255,77,109,.15);
-      color:#ff8aa0;
-      padding:8px 10px;
-      border-radius:10px;
-    }
+}
 
-    .drawer-footer{
-      border-top:1px solid var(--line);
-      padding:18px;
-      background:#0c1728;
-    }
+</script>
 
-    .summary-row{
-      display:flex;
-      justify-content:space-between;
-      margin-bottom:10px;
-      color:var(--muted);
-      font-size:15px;
-    }
-
-    .summary-total{
-      display:flex;
-      justify-content:space-between;
-      font-size:22px;
-      color:var(--gold);
-      font-weight:700;
-      margin:12px 0 14px;
-    }
-
-    /* Modal */
-    .modal-overlay{
-      position:fixed;
-      inset:0;
-      background:rgba(0,0,0,.7);
-      display:none;
-      z-index:120;
-      padding:18px;
-      overflow:auto;
-    }
-
-    .modal-overlay.show{
-      display:block;
-    }
-
-    .modal{
-      max-width:680px;
-      margin:30px auto;
-      background:linear-gradient(180deg,#132746,#0f1f38);
-      border:1px solid var(--line);
-      border-radius:24px;
-      box-shadow:var(--shadow);
-      overflow:hidden;
-    }
-
-    .modal-header{
-      padding:18px 20px;
-      border-bottom:1px solid var(--line);
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:
+</body>
+</html>
