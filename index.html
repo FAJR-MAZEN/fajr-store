@@ -1451,7 +1451,7 @@ function goPg(id){
   window.scrollTo({top:0,behavior:'smooth'});
   if(id==='wishlist')renderWishPage();
   if(id==='account'){if(loggedIn){document.getElementById('acct-out').style.display='none';document.getElementById('acct-in').style.display='block';}else{document.getElementById('acct-out').style.display='block';document.getElementById('acct-in').style.display='none';}}
-}fgfdgg
+}
 function navClick(el,id){
   var hnis=document.querySelectorAll('.ni');for(var i=0;i<hnis.length;i++)hnis[i].classList.remove('on');
   el.classList.add('on');goPg(id);
