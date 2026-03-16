@@ -1680,10 +1680,21 @@ function placeOrder(){
     document.getElementById('sucst').classList.add('on');
 
 window.location.href = 'https://wa.me/'+WA_NUMBER+'?text=' + encodeURIComponent(msg);
-
-btn.classList.remove('loading');
-btn.textContent = AR ? 'تأكيد الطلب' : 'Confirm Order';
 }
+
+function sendWA(){
+
+if (!cart.length){
+toast(AR?'السلة فارغة':'Cart is empty','err');
+return;
+}
+
+var o = calcOrder();
+var itemLines = cart.map(function(it){
+
+return '• ' + (AR?it.nAr:it.nEn) + ' × ' + it.qty + ' = ' + (it.price*it.qty) + ' ' + (AR?'ريال':'SAR');
+
+}).join('\n');
 
 function sendWA(){
   if (!cart.length){ toast(AR?'السلة فارغة':'Cart is empty','err'); return; }
