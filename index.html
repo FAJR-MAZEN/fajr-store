@@ -1679,8 +1679,7 @@ function placeOrder(){
     document.getElementById('coform').style.display = 'none';
     document.getElementById('sucst').classList.add('on');
 
-    window.open('https://wa.me/'+WA_NUMBER+'?text=' + encodeURIComponent(msg));
-    cart = []; promoOn = false; updBdg();
+window.location.href = 'https://wa.me/'+WA_NUMBER+'?text=' + encodeURIComponent(msg);    cart = []; promoOn = false; updBdg();
     btn.classList.remove('loading');
     btn.textContent = AR ? 'تأكيد الطلب' : 'Confirm Order';
   }, 1400);
@@ -1698,9 +1697,7 @@ itemLines + '\n━━━━━━━━━━━━━\n' +
 '💰 Subtotal: '+o.sub+' SAR\n' +
 '🚚 Shipping: '+(o.ship===0?'Free':o.ship+' SAR')+'\n' +
 '✅ Total: '+o.grand+' SAR';
-  window.open('https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(msg));
-}
-
+window.location.href = 'https://wa.me/'+WA_NUMBER+'?text=' + encodeURIComponent(msg);    cart = []; promoOn = false; updBdg();
 // ==================== TRACKING — improved ====================
 function doTrack(){
   var v = document.getElementById('trkin').value.trim();
@@ -2042,31 +2039,22 @@ margin-top:20px;
 </section>
 
 <section style="padding:80px 20px;text-align:center;background:#0b0e1a;color:white">
-
-<h2 style="margin-bottom:30px">شهادات التحليل (COA)</h2>
-
-<div style="max-width:700px;margin:auto;font-size:18px;line-height:2">
-
-<p>✔ Taurine — شهادة تحليل معتمدة</p>
-<p>✔ L-Tyrosine — شهادة تحليل معتمدة</p>
-<p>✔ L-Theanine — شهادة تحليل معتمدة</p>
-<p>✔ Alpha-GPC — شهادة تحليل معتمدة</p>
-<p>✔ Citicoline (Cognizin) — شهادة تحليل معتم�
-
 </body><script>
 
-function sendOrder(orderText){
+function sendOrder(){
 
 const phone = "966548659564";
 const email = "fajr38799@gmail.com";
 
+const message = "طلب جديد من متجر فجر";
+
 const whatsappURL =
-"https://wa.me/" + phone + "?text=" + encodeURIComponent(orderText);
+"https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
 
 const emailURL =
 "mailto:" + email +
 "?subject=" + encodeURIComponent("طلب جديد من متجر فجر") +
-"&body=" + encodeURIComponent(orderText);
+"&body=" + encodeURIComponent(message);
 
 window.open(whatsappURL, "_blank");
 window.open(emailURL, "_blank");
@@ -2078,4 +2066,3 @@ window.open(emailURL, "_blank");
 </body>
 </html>
 </html>
-  
