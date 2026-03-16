@@ -1180,7 +1180,14 @@ function getImg(id) {
 
 // ==================== BOOT ====================
 window.addEventListener('load', function(){
+window.addEventListener('load', function(){
 
+  var loader = document.getElementById('ldr');
+  if(loader){
+    loader.style.display = 'none';
+  }
+
+});
   try{
     renderAll();
     initScrollReveal();
