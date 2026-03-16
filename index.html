@@ -613,7 +613,7 @@ textarea.rfld{height:65px;resize:none}
 <!-- ==================== HOME PAGE ==================== -->
 <div id="pg-home" class="pg on">
   <section class="hero reveal">
-    <div class="heyebrow"><div class="hdot"></div><span id="ey">🇸🇦براند سعودي أصيل;</span></div>
+    <div class="heyebrow"><div class="hdot"></div><span id="ey">براند سعودي أصيل &#127466;&#127480;</span></div>
     <h1 class="hh1"><span class="gr" id="h1a">طاقة ذهنية طبيعية</span><span class="sub" id="h1b">بلا كافيين &bull; بلا إدمان &bull; بلا حدود</span></h1>
     <p class="hp" id="hp">مكمل تحت الشفة بـ 22 مكوناً طبيعياً للتركيز والطاقة طوال اليوم</p>
     <div class="hctas">
@@ -655,6 +655,12 @@ textarea.rfld{height:65px;resize:none}
   <div class="pgrid" id="dgrid"></div>
 
   <div class="sp"></div>
+  <div class="sh reveal"><div class="sht" id="singr">مكوناتنا <span>الطبيعية</span></div></div>
+  <div class="ibox reveal">
+    <div class="ibttl" id="ibttl">22 مكوناً مدعوماً علمياً</div>
+    <div class="ibsub" id="ibsub">كل مكون بجرعة مدروسة</div>
+    <div class="ichips" id="ichips"></div>
+  </div>
 
   <div class="sp"></div>
   <div class="sh reveal"><div class="sht" id="swhy">لماذا <span>فجر؟</span></div></div>
@@ -836,10 +842,31 @@ textarea.rfld{height:65px;resize:none}
 </div>
 
 <!-- ==================== INGREDIENTS PAGE ==================== -->
+<div id="pg-ingredients" class="pg">
+  <div class="pghdr"><button class="bkbtn" onclick="goPg('home')">&#8592; رجوع</button><div class="pgttl">مكونات فجر</div></div>
+  <div style="padding:18px 14px 100px">
+    <p style="color:var(--muted);font-size:13px;line-height:1.7;text-align:center;margin-bottom:22px">تركيبة فجر تحتوي على مكونات طبيعية مختارة بعناية.<br><span style="color:var(--brand);font-weight:700">التركيبة الأساسية سرية ومحمية.</span></p>
+    <div class="ingr-card">
+      <div class="ingr-card-hd">
+        <div class="ingr-card-ico">🍄</div>
+        <div><div class="ingr-card-nm">فطر الشاغا</div><div class="ingr-card-en">Chaga Mushroom Extract</div></div>
+        <div class="ingr-card-badge">✓ معتمد</div>
+      </div>
+      <p class="ingr-card-desc">غني بمضادات الأكسدة القوية ومركبات البيتا-جلوكان الطبيعية.</p>
+      
+    </div>
+    <div class="ingr-secret">
+      <div style="font-size:20px;margin-bottom:6px">🔒</div>
+      <div style="font-weight:700;color:var(--brand2);margin-bottom:4px">التركيبة الكاملة سرية</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.6">المكونات النشطة الرئيسية محمية كملكية فكرية</div>
+    </div>
+  </div>
+</div>
 
 <!-- ==================== BOTTOM NAV ==================== -->
 <nav id="bnav" aria-label="تنقل">
   <button class="nb on"  onclick="goPg('home')"        id="nb-home"><div class="nb-ico">&#127968;</div><div class="nb-lbl" id="nb-hl">الرئيسية</div></button>
+  <button class="nb"     onclick="goPg('ingredients')" id="nb-ingr"><div class="nb-ico">&#9881;&#65039;</div><div class="nb-lbl" id="nb-il">مكونات</div></button>
   <button class="nb"     onclick="goPg('tracking')"    id="nb-track"><div class="nb-ico">&#128230;</div><div class="nb-lbl" id="nb-tl">طلباتي</div></button>
   <button class="nb"     onclick="goPg('contact')"     id="nb-cnt"><div class="nb-ico">&#128222;</div><div class="nb-lbl" id="nb-cntl">تواصل</div></button>
   <button class="nb"     onclick="goPg('account')"     id="nb-acct"><div class="nb-ico">&#128100;</div><div class="nb-lbl" id="nb-al">حسابي</div></button>
@@ -987,7 +1014,10 @@ textarea.rfld{height:65px;resize:none}
               <div class="poti">&#127981;</div>
               <div class="potl" id="pbank">تحويل بنكي</div>
             </div>
-           
+            <div class="popt disabled">
+              <div class="popt-soon">قريباً</div>
+              <div class="poti">&#127815;</div>
+              <div class="potl">Apple Pay</div>
             </div>
             <div class="popt disabled">
               <div class="popt-soon">قريباً</div>
@@ -996,7 +1026,7 @@ textarea.rfld{height:65px;resize:none}
             </div>
           </div>
           <div id="pi-bank" class="payinfo">
-            <div>&#127981; بنك العربي(برق)</div>
+            <div>&#127981; بنك الراجحي</div>
             <div id="pi-bnm">اسم المستفيد: مازن أحمد</div>
             <div class="ibanw">
               <span class="ibanv">SA64 3010 0991 1049 4161 8846</span>
@@ -1180,27 +1210,10 @@ function getImg(id) {
 
 // ==================== BOOT ====================
 window.addEventListener('load', function(){
-window.addEventListener('load', function(){
-
-  var loader = document.getElementById('ldr');
-  if(loader){
-    loader.style.display = 'none';
-  }
-
-});
-  try{
-    renderAll();
-    initScrollReveal();
-    loadWishFromStorage();
-  }catch(e){
-    console.log("FAJR error:", e);
-  }
-
-  setTimeout(function(){
-    const l=document.getElementById('ldr');
-    if(l) l.classList.add('hide');
-  },1200);
-
+  renderAll();
+  initScrollReveal();
+  loadWishFromStorage();
+  setTimeout(function(){ document.getElementById('ldr').classList.add('hide'); }, 1400);
 });
 
 // ==================== SCROLL REVEAL (Intersection Observer) ====================
@@ -1247,16 +1260,16 @@ var DRINKS = [
    dEn:'All three flavors in one pack'},
   {id:1, price:15, nAr:'فجر فليم فاير', nEn:'FAJR Flame Fire',
    tagAr:'🔥 طاقة وقوة', tagEn:'🔥 Energy & Power',
-   dAr:'زنجبيل + كاكاو | Taurine · L-Tyrosine · B12 · Niacin',
-   dEn:'Ginger + Cacao | Taurine · L-Tyrosine · B12 · Niacin'},
+   dAr:'زنجبيل + كاكاو | Taurine • L-Tyrosine • B12 • Niacin',
+   dEn:'Ginger + Cacao | Taurine • L-Tyrosine • B12 • Niacin'},
   {id:2, price:15, nAr:'فجر آيسي مينت', nEn:'FAJR Icy Mint',
    tagAr:'❄️ تركيز هادئ', tagEn:'❄️ Calm Focus',
-   dAr:'نعناع + ليمون | L-Theanine · Citicoline · Alpha-GPC',
-   dEn:'Mint + Lemon | L-Theanine · Citicoline · Alpha-GPC'},
+   dAr:'نعناع + ليمون | L-Theanine • Citicoline • Alpha-GPC',
+   dEn:'Mint + Lemon | L-Theanine • Citicoline • Alpha-GPC'},
   {id:3, price:15, nAr:'فجر داون', nEn:'FAJR Dawn',
    tagAr:'🌅 طاقة طبيعية', tagEn:'🌅 Natural Energy',
-   dAr:'تمر + عسل | Chaga · Bacopa · Ginkgo · Honey · Date',
-   dEn:'Date + Honey | Chaga · Bacopa · Ginkgo · Honey · Date'}
+   dAr:'تمر + عسل | Chaga • Bacopa • Ginkgo • Honey • Date',
+   dEn:'Date + Honey | Chaga • Bacopa • Ginkgo • Honey • Date'}
 ];
 
 function getDrinkImg(id){ var el=document.getElementById('dsrc'+id); return el?el.src:''; }
@@ -1292,7 +1305,7 @@ function renderAll(){
   renderWhy();
   renderGRevs();
   renderVals();
- 
+  applyLang();
 }
 
 // ==================== RENDER PRODUCTS ====================
@@ -1686,22 +1699,12 @@ function placeOrder(){
     document.getElementById('coform').style.display = 'none';
     document.getElementById('sucst').classList.add('on');
 
-window.location.href = 'https://wa.me/'+WA_NUMBER+'?text=' + encodeURIComponent(msg);
+    window.open('https://wa.me/'+WA_NUMBER+'?text=' + encodeURIComponent(msg));
+    cart = []; promoOn = false; updBdg();
+    btn.classList.remove('loading');
+    btn.textContent = AR ? 'تأكيد الطلب' : 'Confirm Order';
+  }, 1400);
 }
-
-function sendWA(){
-
-if (!cart.length){
-toast(AR?'السلة فارغة':'Cart is empty','err');
-return;
-}
-
-var o = calcOrder();
-var itemLines = cart.map(function(it){
-
-return '• ' + (AR?it.nAr:it.nEn) + ' × ' + it.qty + ' = ' + (it.price*it.qty) + ' ' + (AR?'ريال':'SAR');
-
-}).join('\n');
 
 function sendWA(){
   if (!cart.length){ toast(AR?'السلة فارغة':'Cart is empty','err'); return; }
@@ -1715,7 +1718,9 @@ itemLines + '\n━━━━━━━━━━━━━\n' +
 '💰 Subtotal: '+o.sub+' SAR\n' +
 '🚚 Shipping: '+(o.ship===0?'Free':o.ship+' SAR')+'\n' +
 '✅ Total: '+o.grand+' SAR';
-window.location.href = 'https://wa.me/'+WA_NUMBER+'?text=' + encodeURIComponent(msg);    cart = []; promoOn = false; updBdg();
+  window.open('https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(msg));
+}
+
 // ==================== TRACKING — improved ====================
 function doTrack(){
   var v = document.getElementById('trkin').value.trim();
@@ -1867,6 +1872,9 @@ function applyLang(){
   document.getElementById('chprem').textContent = AR ? 'فاخر' : 'Premium';
   document.getElementById('chlim').textContent  = AR ? 'محدود' : 'Limited';
   document.getElementById('chnew').textContent  = AR ? 'جديد' : 'New';
+  document.getElementById('singr').innerHTML    = AR ? 'مكوناتنا <span>الطبيعية</span>' : 'Natural <span>Ingredients</span>';
+  document.getElementById('ibttl').textContent  = AR ? '22 مكوناً مدعوماً علمياً' : '22 Science-Backed Ingredients';
+  document.getElementById('ibsub').textContent  = AR ? 'كل مكون بجرعة مدروسة' : 'Every ingredient at research-proven doses';
   document.getElementById('swhy').innerHTML     = AR ? 'لماذا <span>فجر؟</span>' : 'Why <span>FAJR?</span>';
   document.getElementById('sadvs').innerHTML    = AR ? 'مميزاتنا <span>الحصرية</span>' : 'Exclusive <span>Advantages</span>';
   document.getElementById('srevs').innerHTML    = AR ? 'آراء <span>عملائنا</span>' : 'Customer <span>Reviews</span>';
@@ -1876,7 +1884,7 @@ function applyLang(){
   document.getElementById('ni-cnt').textContent = AR ? 'تواصل' : 'Contact';
   document.getElementById('ni-abt').textContent = AR ? 'عن فجر' : 'About';
   document.getElementById('nb-hl').textContent  = AR ? 'الرئيسية' : 'Home';
-document.getElementById('nb-i1').style.display = "none";
+  document.getElementById('nb-il').textContent  = AR ? 'مكونات' : 'Ingredients';
   document.getElementById('nb-tl').textContent  = AR ? 'طلباتي' : 'Orders';
   document.getElementById('nb-cntl').textContent= AR ? 'تواصل' : 'Contact';
   document.getElementById('nb-al').textContent  = AR ? 'حسابي' : 'Account';
@@ -2057,30 +2065,13 @@ margin-top:20px;
 </section>
 
 <section style="padding:80px 20px;text-align:center;background:#0b0e1a;color:white">
-</body><script>
 
-function sendOrder(){
+<h2 style="margin-bottom:30px">شهادات التحليل (COA)</h2>
 
-const phone = "966548659564";
-const email = "fajr38799@gmail.com";
+<div style="max-width:700px;margin:auto;font-size:18px;line-height:2">
 
-const message = "طلب جديد من متجر فجر";
-
-const whatsappURL =
-"https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
-
-const emailURL =
-"mailto:" + email +
-"?subject=" + encodeURIComponent("طلب جديد من متجر فجر") +
-"&body=" + encodeURIComponent(message);
-
-window.open(whatsappURL, "_blank");
-window.open(emailURL, "_blank");
-
-}
-
-</script>
-
-</body>
-</html>
-</html>
+<p>✔ Taurine — شهادة تحليل معتمدة</p>
+<p>✔ L-Tyrosine — شهادة تحليل معتمدة</p>
+<p>✔ L-Theanine — شهادة تحليل معتمدة</p>
+<p>✔ Alpha-GPC — شهادة تحليل معتمدة</p>
+<p>✔ Citicoline (Cognizin) — شهادة تحليل معتم�
