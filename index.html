@@ -1679,10 +1679,10 @@ function placeOrder(){
     document.getElementById('coform').style.display = 'none';
     document.getElementById('sucst').classList.add('on');
 
-window.location.href = 'https://wa.me/'+WA_NUMBER+'?text=' + encodeURIComponent(msg);    cart = []; promoOn = false; updBdg();
-    btn.classList.remove('loading');
-    btn.textContent = AR ? 'تأكيد الطلب' : 'Confirm Order';
-  }, 1400);
+window.location.href = 'https://wa.me/'+WA_NUMBER+'?text=' + encodeURIComponent(msg);
+
+btn.classList.remove('loading');
+btn.textContent = AR ? 'تأكيد الطلب' : 'Confirm Order';
 }
 
 function sendWA(){
