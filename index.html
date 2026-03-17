@@ -1709,7 +1709,7 @@ function sendWA(){
 '🌅 'طلبي هو\n━━━━━━━━━━━━━\n' +
 itemLines + '\n━━━━━━━━━━━━━\n' +
 '💰 المجموع الفرعي: '+o.sub+' SAR\n' +
-'🚚 Shipping: '+(o.ship===0?'Free':o.ship+' SAR')+'\n' +
+'🚚 الشحن: '+(o.ship===0?'Free':o.ship+' SAR')+'\n' +
 '✅ اجمالي: '+o.grand+' SAR';
   window.open('https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(msg));
 }
@@ -1926,7 +1926,7 @@ function applyLang(){
   document.getElementById('chrs').textContent   = AR ? 'أوقات العمل' : 'Working Hours';
   document.getElementById('chrv').textContent   = AR ? 'السبت - الخميس | 9 ص - 10 م' : 'Sat - Thu | 9 AM - 10 PM';
   document.getElementById('csh').textContent    = AR ? 'الشحن' : 'Shipping';
-  document.getElementById('cshv').textContent   = AR ? '25 ريال | مجاني فوق 200 | 2-4 أيام' : 'SAR 35 | Free above 200 | 2-4 days';
+  document.getElementById('cshv').textContent   = AR ? '35 ريال | مجاني فوق 200 | 2-4 أيام' : 'SAR 35 | Free above 200 | 2-4 days';
   document.getElementById('cftl').textContent   = AR ? 'أرسل رسالة' : 'Send a Message';
   document.getElementById('cfnml').textContent  = AR ? 'اسمك' : 'Your Name';
   document.getElementById('cfphl').textContent  = AR ? 'الجوال' : 'Phone';
