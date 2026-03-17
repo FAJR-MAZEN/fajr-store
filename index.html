@@ -42,7 +42,8 @@ img{max-width:100%;height:auto}
 #sky{position:fixed;inset:0;z-index:0;pointer-events:none}
 
 /* ==================== LOADER ==================== */
-#ldr{position:fixed;inset:0;z-index:9999;background:var(--bg);display:none;flex-direction:column;align-items:center;justify-content:center}#ldr.hide{opacity:0;visibility:hidden;pointer-events:none}
+#ldr{position:fixed;inset:0;z-index:9999;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity .6s,visibility .6s}
+#ldr.hide{opacity:0;visibility:hidden;pointer-events:none}
 .lring{width:60px;height:60px;border:3px solid rgba(255,107,53,.15);border-top-color:var(--brand);border-radius:50%;animation:spin 1s linear infinite;margin-bottom:20px}
 @keyframes spin{to{transform:rotate(360deg)}}
 .llogo{font-size:44px;font-weight:900;color:var(--brand);margin-bottom:14px}
@@ -686,13 +687,9 @@ textarea.rfld{height:65px;resize:none}
           <div class="icon" style="background:rgba(37,211,102,.12)">&#128241;</div>
           <div class="info"><strong>واتساب</strong><span>+966 54 865 9564</span></div>
         </a>
-        <a href="mailto:fajr38799@gmail.com" class="footer-contact-card">
-<div class="icon" style="background:rgba(0,212,255,.1)">&#128231;</div>
-<div class="info">
-<strong>البريد الإلكتروني</strong>
-<span>fajr38799@gmail.com</span>
-</div>
-</a>
+        <a href="/cdn-cgi/l/email-protection#90f6f1fae2a3a8a7a9a9d0f7fdf1f9fcbef3fffd" class="footer-contact-card">
+          <div class="icon" style="background:rgba(0,212,255,.1)">&#128231;</div>
+          <div class="info"><strong>البريد الإلكتروني</strong><span><span class="__cf_email__" data-cfemail="0a6c6b607839323d33334a6d676b636624696567">[email&#160;protected]</span></span></div>
         </a>
       </div>
       <div class="footer-col">
@@ -770,7 +767,7 @@ textarea.rfld{height:65px;resize:none}
           <div class="fg2"><label id="rgll">اسم العائلة</label><input id="rgl" type="text" placeholder="محمد"></div>
         </div>
         <div class="fg2"><label id="rgphl">الجوال</label><input id="rgph" type="tel" placeholder="05xxxxxxxx" dir="ltr"></div>
-        <div class="fg2"><label id="rgeml">البريد الإلكتروني</label><input id="rgem" type="email" placeholder="fajr38799@gmail.com" dir="ltr"></div>
+        <div class="fg2"><label id="rgeml">البريد الإلكتروني</label><input id="rgem" type="email" placeholder="email@example.com" dir="ltr"></div>
         <div class="fg2"><label id="rgpwl">كلمة المرور</label><input id="rgpw" type="password" placeholder="8 أحرف أو أكثر"></div>
         <button class="asub" id="rgbtn" onclick="doReg()">إنشاء حساب</button>
       </div>
@@ -802,9 +799,9 @@ textarea.rfld{height:65px;resize:none}
       <div class="cntico" style="background:rgba(37,211,102,.12)">&#128241;</div>
       <div class="cntil"><strong id="cwa">واتساب</strong><span>+966 54 865 9564</span></div>
     </a>
-    <a href="/cdn-cgi/l/fajr38799@gmail.com" class="cntcard">
+    <a href="/cdn-cgi/l/email-protection#e187808b93d2d9d6d8d8a1868c80888dcf828e8c" class="cntcard">
       <div class="cntico" style="background:rgba(0,212,255,.1)">&#128231;</div>
-      <div class="cntil"><strong id="cem">البريد الإلكتروني</strong><span><span class="fajr38799@gmail.com" data-cfemail="d0b6b1baa2e3e8e7e9e990b7bdb1b9bcfeb3bfbd">[fajr38799@gmail.com]</span></span></div>
+      <div class="cntil"><strong id="cem">البريد الإلكتروني</strong><span><span class="__cf_email__" data-cfemail="d0b6b1baa2e3e8e7e9e990b7bdb1b9bcfeb3bfbd">[email&#160;protected]</span></span></div>
     </a>
     <div class="cntcard">
       <div class="cntico" style="background:rgba(255,215,0,.1)">&#128336;</div>
@@ -812,7 +809,7 @@ textarea.rfld{height:65px;resize:none}
     </div>
     <div class="cntcard">
       <div class="cntico" style="background:rgba(255,107,53,.1)">&#128230;</div>
-      <div class="cntil"><strong id="csh">الشحن</strong><span id="cshv">35 ريال | مجاني فوق 200 ريال | 2-4 أيام</span></div>
+      <div class="cntil"><strong id="csh">الشحن</strong><span id="cshv">25 ريال | مجاني فوق 200 ريال | 2-4 أيام</span></div>
     </div>
   </div>
   <div class="cntform">
@@ -844,11 +841,32 @@ textarea.rfld{height:65px;resize:none}
   </div>
 </div>
 
-
+<!-- ==================== INGREDIENTS PAGE ==================== -->
+<div id="pg-ingredients" class="pg">
+  <div class="pghdr"><button class="bkbtn" onclick="goPg('home')">&#8592; رجوع</button><div class="pgttl">مكونات فجر</div></div>
+  <div style="padding:18px 14px 100px">
+    <p style="color:var(--muted);font-size:13px;line-height:1.7;text-align:center;margin-bottom:22px">تركيبة فجر تحتوي على مكونات طبيعية مختارة بعناية.<br><span style="color:var(--brand);font-weight:700">التركيبة الأساسية سرية ومحمية.</span></p>
+    <div class="ingr-card">
+      <div class="ingr-card-hd">
+        <div class="ingr-card-ico">🍄</div>
+        <div><div class="ingr-card-nm">فطر الشاغا</div><div class="ingr-card-en">Chaga Mushroom Extract</div></div>
+        <div class="ingr-card-badge">✓ معتمد</div>
+      </div>
+      <p class="ingr-card-desc">غني بمضادات الأكسدة القوية ومركبات البيتا-جلوكان الطبيعية.</p>
+      
+    </div>
+    <div class="ingr-secret">
+      <div style="font-size:20px;margin-bottom:6px">🔒</div>
+      <div style="font-weight:700;color:var(--brand2);margin-bottom:4px">التركيبة الكاملة سرية</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.6">المكونات النشطة الرئيسية محمية كملكية فكرية</div>
+    </div>
+  </div>
+</div>
 
 <!-- ==================== BOTTOM NAV ==================== -->
 <nav id="bnav" aria-label="تنقل">
   <button class="nb on"  onclick="goPg('home')"        id="nb-home"><div class="nb-ico">&#127968;</div><div class="nb-lbl" id="nb-hl">الرئيسية</div></button>
+  <button class="nb"     onclick="goPg('ingredients')" id="nb-ingr"><div class="nb-ico">&#9881;&#65039;</div><div class="nb-lbl" id="nb-il">مكونات</div></button>
   <button class="nb"     onclick="goPg('tracking')"    id="nb-track"><div class="nb-ico">&#128230;</div><div class="nb-lbl" id="nb-tl">طلباتي</div></button>
   <button class="nb"     onclick="goPg('contact')"     id="nb-cnt"><div class="nb-ico">&#128222;</div><div class="nb-lbl" id="nb-cntl">تواصل</div></button>
   <button class="nb"     onclick="goPg('account')"     id="nb-acct"><div class="nb-ico">&#128100;</div><div class="nb-lbl" id="nb-al">حسابي</div></button>
@@ -2057,14 +2075,3 @@ margin-top:20px;
 <p>✔ L-Theanine — شهادة تحليل معتمدة</p>
 <p>✔ Alpha-GPC — شهادة تحليل معتمدة</p>
 <p>✔ Citicoline (Cognizin) — شهادة تحليل معتم�
-
-  
-<script>
-window.addEventListener('load', function(){
-  var l = document.getElementById('ldr');
-  if(l){ l.classList.add('hide'); }
-});
-</script>
-
-</body>
-</html>
