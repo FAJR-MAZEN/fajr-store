@@ -33,3 +33,24 @@ function getCartCount(){
 }
 
 getCartCount();
+const productsContainer = document.getElementById("products");
+
+if(productsContainer){
+
+productsContainer.innerHTML = `
+<div>
+
+<img src="images/fajr-energy.png" width="200">
+
+<h3>فجر فيلم بيرست</h3>
+
+<p>السعر 39 ريال</p>
+
+<button onclick="addToCart('فجر فيلم بيرست',39,'images/fajr-energy.png')">
+أضف للسلة
+</button>
+
+</div>
+`;
+
+}
