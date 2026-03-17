@@ -833,7 +833,7 @@ textarea.rfld{height:65px;resize:none}
   </div>
   <div class="fndcard">
     <h3 id="fndh">كلمة المؤسس</h3>
-    <p id="fndp">لم أصنع فجر لأبيعه — صنعته لأنني لم أجد ما كنت أبحث عنه. هذا المنتج لكم.</p>
+    <p id="fndp">لم أصنع فجر لأبيعه — صنعته لأنني لم أجد الطاقة اللتي كنت أبحث عنها. هذا المنتج لكم.</p>
     <cite>- مازن، مؤسس فجر</cite>
   </div>
 </div>
@@ -886,7 +886,7 @@ textarea.rfld{height:65px;resize:none}
       <div class="fsnote" id="fsnote">&#10003; شحن مجاني!</div>
       <div id="sumlines"></div>
       <div class="stot"><span id="totlbl">الإجمالي</span><span id="totval">0</span></div>
-      <button class="wabtn" id="wabtn" onclick="sendWA()">&#128241; طلب عبر واتساب فقط حاليا</button>
+      <button class="wabtn" id="wabtn" onclick="sendWA()">&#128241; طلب عبر واتساب فقط حاليا أضغط هنا</button>
     </div>
   </div>
 </div>
@@ -1670,7 +1670,7 @@ function placeOrder(){
 
     var msg =
 '━━━━━━━━━━━━━━━\n' +
-'🌅 FAJR ORDER\n' +
+'🌅 طلبي\n' +
 '━━━━━━━━━━━━━━━\n' +
 '🔖 Order ID: ' + num + '\n' +
 '👤 Name: ' + fn + ' ' + ln + '\n' +
@@ -1681,10 +1681,10 @@ function placeOrder(){
 '━━━━━━━━━━━━━━━\n' +
 '🛍️ PRODUCTS:\n' + itemLines + '\n' +
 '━━━━━━━━━━━━━━━\n' +
-'💰 Subtotal: ' + o.sub + ' SAR\n' +
+'💰 إجمالي: ' + o.sub + ' SAR\n' +
 (o.disc ? '🎁 Discount: -' + o.disc + ' SAR\n' : '') +
-'🚚 Shipping: ' + (o.ship === 0 ? 'Free' : o.ship + ' SAR') + '\n' +
-'✅ TOTAL: ' + o.grand + ' SAR\n' +
+'🚚 الشحن: ' + (o.ship === 0 ? 'Free' : o.ship + ' SAR') + '\n' +
+'✅ المجموع: ' + o.grand + ' SAR\n' +
 '━━━━━━━━━━━━━━━';
 
     document.getElementById('suct').textContent = AR ? 'تم الطلب بنجاح! 🎉' : 'Order Placed! 🎉';
