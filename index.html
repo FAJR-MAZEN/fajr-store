@@ -42,7 +42,10 @@ img{max-width:100%;height:auto}
 #sky{position:fixed;inset:0;z-index:0;pointer-events:none}
 
 /* ==================== LOADER ==================== */
-
+#ldr{position:fixed;inset:0;z-index:9999;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity .6s,visibility .6s}
+#ldr.hide{opacity:0;visibility:hidden;pointer-events:none}
+.lring{width:60px;height:60px;border:3px solid rgba(255,107,53,.15);border-top-color:var(--brand);border-radius:50%;animation:spin 1s linear infinite;margin-bottom:20px}
+@keyframes spin{to{transform:rotate(360deg)}}
 .llogo{font-size:44px;font-weight:900;color:var(--brand);margin-bottom:14px}
 .lbar{width:150px;height:2px;background:rgba(255,255,255,.08);border-radius:1px;overflow:hidden;margin-top:10px}
 .lfill{height:100%;background:linear-gradient(90deg,var(--brand),var(--brand2));animation:lf 1.5s ease-out forwards}
@@ -764,7 +767,7 @@ textarea.rfld{height:65px;resize:none}
           <div class="fg2"><label id="rgll">اسم العائلة</label><input id="rgl" type="text" placeholder="محمد"></div>
         </div>
         <div class="fg2"><label id="rgphl">الجوال</label><input id="rgph" type="tel" placeholder="05xxxxxxxx" dir="ltr"></div>
-        <div class="fg2"><label id="rgeml">البريد الإلكتروني</label><input id="rgem" type="email" placeholder="fajr38799@gmail.com" dir="ltr"></div>
+        <div class="fg2"><label id="rgeml">البريد الإلكتروني</label><input id="rgem" type="email" placeholder="email@example.com" dir="ltr"></div>
         <div class="fg2"><label id="rgpwl">كلمة المرور</label><input id="rgpw" type="password" placeholder="8 أحرف أو أكثر"></div>
         <button class="asub" id="rgbtn" onclick="doReg()">إنشاء حساب</button>
       </div>
@@ -851,11 +854,19 @@ textarea.rfld{height:65px;resize:none}
       </div>
       <p class="ingr-card-desc">غني بمضادات الأكسدة القوية ومركبات البيتا-جلوكان الطبيعية.</p>
       
-    
+    </div>
+    <div class="ingr-secret">
+      <div style="font-size:20px;margin-bottom:6px">🔒</div>
+      <div style="font-weight:700;color:var(--brand2);margin-bottom:4px">التركيبة الكاملة سرية</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.6">المكونات النشطة الرئيسية محمية كملكية فكرية</div>
+    </div>
+  </div>
+</div>
 
 <!-- ==================== BOTTOM NAV ==================== -->
 <nav id="bnav" aria-label="تنقل">
   <button class="nb on"  onclick="goPg('home')"        id="nb-home"><div class="nb-ico">&#127968;</div><div class="nb-lbl" id="nb-hl">الرئيسية</div></button>
+  <button class="nb"     onclick="goPg('ingredients')" id="nb-ingr"><div class="nb-ico">&#9881;&#65039;</div><div class="nb-lbl" id="nb-il">مكونات</div></button>
   <button class="nb"     onclick="goPg('tracking')"    id="nb-track"><div class="nb-ico">&#128230;</div><div class="nb-lbl" id="nb-tl">طلباتي</div></button>
   <button class="nb"     onclick="goPg('contact')"     id="nb-cnt"><div class="nb-ico">&#128222;</div><div class="nb-lbl" id="nb-cntl">تواصل</div></button>
   <button class="nb"     onclick="goPg('account')"     id="nb-acct"><div class="nb-ico">&#128100;</div><div class="nb-lbl" id="nb-al">حسابي</div></button>
