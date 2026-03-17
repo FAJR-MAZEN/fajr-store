@@ -42,8 +42,7 @@ img{max-width:100%;height:auto}
 #sky{position:fixed;inset:0;z-index:0;pointer-events:none}
 
 /* ==================== LOADER ==================== */
-#ldr{position:fixed;inset:0;z-index:9999;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity .6s,visibility .6s}
-#ldr.hide{opacity:0;visibility:hidden;pointer-events:none}
+#ldr{position:fixed;inset:0;z-index:9999;background:var(--bg);display:none;flex-direction:column;align-items:center;justify-content:center}#ldr.hide{opacity:0;visibility:hidden;pointer-events:none}
 .lring{width:60px;height:60px;border:3px solid rgba(255,107,53,.15);border-top-color:var(--brand);border-radius:50%;animation:spin 1s linear infinite;margin-bottom:20px}
 @keyframes spin{to{transform:rotate(360deg)}}
 .llogo{font-size:44px;font-weight:900;color:var(--brand);margin-bottom:14px}
