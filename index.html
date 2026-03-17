@@ -1706,11 +1706,11 @@ function sendWA(){
     return '• '+(AR?it.nAr:it.nEn)+' × '+it.qty+' = '+(it.price*it.qty)+' '+(AR?'ريال':'SAR');
   }).join('\n');
   var msg =
-'🌅 FAJR ORDER\n━━━━━━━━━━━━━\n' +
+'🌅 'طلبي هو\n━━━━━━━━━━━━━\n' +
 itemLines + '\n━━━━━━━━━━━━━\n' +
-'💰 Subtotal: '+o.sub+' SAR\n' +
+'💰 المجموع الفرعي: '+o.sub+' SAR\n' +
 '🚚 Shipping: '+(o.ship===0?'Free':o.ship+' SAR')+'\n' +
-'✅ Total: '+o.grand+' SAR';
+'✅ اجمالي: '+o.grand+' SAR';
   window.open('https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(msg));
 }
 
