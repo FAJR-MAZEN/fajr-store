@@ -574,11 +574,10 @@ textarea.rfld{height:65px;resize:none}
   <div class="ticker" id="ticker">
     <span><b>⚠️</b> يُمنع ابتلاع المنتج — للاستخدام تحت الشفة فقط</span>
     <span><b>&#10003;</b> <span id="tk1">شحن مجاني فوق 200 ريال</span></span>
-    <span><b>&#9889;</b> <span id="tk2">22 مكوناً طبيعياً</span></span>
-    <span><b>&#127881;</b> <span id="tk3">بلا كافيين ولا إدمان</span></span>
+    <span><b>&#9889;</b> <span id="tk2">8 مكونات طبيعية</span></span>
     <span><b>&#128230;</b> <span id="tk4">توصيل 2-4 أيام</span></span>
     <span><b>&#10003;</b> شحن مجاني فوق 200 ريال</span>
-    <span><b>&#9889;</b> 22 مكوناً طبيعياً</span>
+    <span><b>&#9889;</b> مكونات طبيعية</span>
   </div>
 </div>
 
@@ -610,10 +609,10 @@ textarea.rfld{height:65px;resize:none}
 <div id="pg-home" class="pg on">
   <section class="hero reveal">
     <div class="heyebrow"><div class="hdot"></div><span id="ey">براند سعودي أصيل &#127466;&#127480;</span></div>
-    <h1 class="hh1"><span class="gr" id="h1a">طاقة ذهنية طبيعية %100</span><span class="sub" id="h1b">بلا كافيين &bull; بلا إدمان &bull; بلا حدود</span></h1>
-    <p class="hp" id="hp">مكمل تحت الشفة بـ 22 مكوناً طبيعياً للتركيز والطاقة طوال اليوم</p>
+    <h1 class="hh1"><span class="gr" id="h1a">طاقة ذهنية طبيعية %100</span><span class="sub" id="h1b"> &bull;-&bull; بلا حدود</span></h1>
+    <p class="hp" id="hp">مكمل تحت الشفة بـ 8 مكونات طبيعية للتركيز والطاقة طوال اليوم</p>
     <div class="hctas">
-      <button class="btnp" id="cshop" onclick="scrollToProd()">تسوق الآن </button>
+      <button class="btnp" id="cshop" onclick="scrollToProd()">أشتر الآن </button>
       <button class="btng" id="cstory" onclick="goPg('about')">قصة فجر</button>
     </div>
     <div class="hstats">
@@ -653,7 +652,7 @@ textarea.rfld{height:65px;resize:none}
   <div class="sp"></div>
   <div class="sh reveal"><div class="sht" id="singr">مكوناتنا <span>الطبيعية</span></div></div>
   <div class="ibox reveal">
-    <div class="ibttl" id="ibttl">22 مكوناً مدعوماً علمياً</div>
+    <div class="ibttl" id="ibttl">-</div>
     <div class="ibsub" id="ibsub">كل مكون بجرعة مدروسة</div>
     <div class="ichips" id="ichips"></div>
   </div>
@@ -675,7 +674,7 @@ textarea.rfld{height:65px;resize:none}
     <div class="footer-grid">
       <div class="footer-col">
         <h4 id="ft-brand">فجر | FAJR</h4>
-        <span id="ft-desc">براند سعودي أصيل للطاقة الذهنية الطبيعية. بلا كافيين، بلا إدمان بلا مواد صناعية.</span>
+        <span id="ft-desc">براند سعودي أصيل للطاقة الذهنية الطبيعية. بلا نيكوتين، بلا مواد صناعية.</span>
       </div>
       <div class="footer-col">
         <h4 id="ft-contact-h">تواصل معنا</h4>
@@ -1053,41 +1052,38 @@ var PRODS = [
   {id:0, cat:'basic',   price:135,
    nAr:'الكل في واحد', nEn:'All in One',
    bAr:'الأكثر مبيعاً', bEn:'Best Seller', bCls:'bh',
-   dAr:'التركيبة الأساسية الشاملة من فجر. 22 مكوناً طبيعياً لدعم الطاقة والتركيز طوال اليوم.',
-   dEn:'The complete FAJR formula. 22 natural ingredients for sustained energy and sharp focus.',
-   ingrs:['L-Theanine 200mg','L-Tyrosine 500mg','Alpha-GPC 300mg','Taurine 1000mg','B12 1000mcg','Ginkgo 60mg','Bacopa 120mg'],
+   dAr:'التركيبة الأساسية الشاملة من فجر. 8 مكونات طبيعياً لدعم الطاقة والتركيز طوال اليوم.',
+   dEn:'The complete FAJR formula. 8 natural ingredients for sustained energy and sharp focus.',
+   ingrs:['L-Theanine 200mg','Alpha-GPC 150mg','Taurine 300mg','L-Tyrosine','caffeine 100mg','Niacin 15mg','Xanthan','Cellulose 450mg],
    revs:[]},
   {id:1, cat:'new',     price:LAUNCH_PRICE,
    nAr:'آيسي فريش', nEn:'Icy Fresh',
    bAr:'جديد', bEn:'New', bCls:'bn',
    dAr:'نفس قوة فجر مع نكهة النعناع الجليدية المنعشة و الليمون. تجربة مختلفة كلياً.',
    dEn:'Same FAJR power with an invigorating icy mint flavor. A completely different experience.',
-   ingrs:['L-Theanine 200mg','Alpha-GPC 300mg','Taurine 1000mg','Natural Mint','B12 1000mcg'],
+   ingrs:['L-Theanine 200mg','Alpha-GPC 150mg','Taurine 300mg','L-Tyrosine','caffeine 100mg','Niacin 15mg','Xanthan','Cellulose 450mg],
    revs:[]},
   {id:2, cat:'premium', price:LAUNCH_PRICE,
    nAr:'FAJR GOLD', nEn:'FAJR GOLD',
    bAr:'فاخر', bEn:'Premium', bCls:'bg',
    dAr:'النسخة الذهبية المطورة بنكهة التمر. جرعات مضاعفة ومكونات إضافية.',
    dEn:'The upgraded gold edition. Double doses and premium ingredients for peak performance.',
-   ingrs:['Alpha-GPC 600mg','Citicoline 500mg','Bacopa 240mg','Lions Mane 500mg','B12 2000mcg'],
+   ingrs:['L-Theanine 200mg','Alpha-GPC 150mg','Taurine 300mg','L-Tyrosine','caffeine 100mg','Niacin 15mg','Xanthan','Cellulose 450mg],
    revs:[]},
   {id:3, cat:'limited', price:LAUNCH_PRICE,
    nAr:'المؤسس', nEn:'The Founder',
    bAr:'محدود', bEn:'Limited', bCls:'bl',
    dAr:'نسخة محدودة جداً للمبدعين والمؤسسين بنكهة الجنزبيل و الليمون. 50 عبوة فقط.',
    dEn:'Very limited edition for creators and founders. Only 50 units.',
-   ingrs:['Alpha-GPC 600mg','Bacopa 300mg','Lions Mane 1000mg','Rhodiola 300mg','NMN 250mg'],
+   ingrs:['L-Theanine 200mg','Alpha-GPC 150mg','Taurine 300mg','L-Tyrosine','caffeine 100mg','Niacin 15mg','Xanthan','Cellulose 450mg],
    revs:[]}
 ];
 
 var INGRS = [
-  'L-Theanine 200mg','L-Tyrosine 500mg','Alpha-GPC 300mg','Citicoline 250mg',
-  'Chaga Mushroom 500mg','Taurine 1000mg','Glucuronolactone 600mg','Inositol 250mg',
-  'B12 Methylcobalamin 1000mcg','Niacin B3 20mg','Magnesium Glycinate 100mg',
-  'Himalayan Salt 50mg','Ginkgo Biloba 60mg','Bacopa Monnieri 120mg',
-  'Green Tea Extract 100mg','L-Phenylalanine 100mg','Vegetable Glycerin 200mg',
-  'Xanthan Gum 50mg','Natural Mint 10mg','Honey Powder 100mg',
-  'Date Powder 100mg','Raw Cacao 100mg'
+  'L-Theanine 200mg','L-Tyrosine 250mg','Alpha-GPC 150mg','Citicoline 450mg',
+  'Caffeine 100mg','Taurine 300mg','Xanthan 5mg',
+  'B12 ','Niacin B3 20mg',
+  'Himalayan Salt 50mg',
 ];
 
 var FEATS_DATA = [
@@ -1103,7 +1099,7 @@ var FEATS_DATA = [
 
 var WHY_DATA = [
   {i:'🎯', tAr:'تأثير مُستهدف',  tEn:'Targeted Effect',   dAr:'كل مكون يعمل بشكل متكامل', dEn:'Every ingredient works synergistically'},
-  {i:'🧪', tAr:'تركيبة فريدة',   tEn:'Unique Formula',    dAr:'22 مكون بعد أبحاث مكثفة',  dEn:'22 ingredients after intensive research'},
+  {i:'🧪', tAr:'تركيبة فريدة',   tEn:'Unique Formula',    dAr:'8 مكون بعد أبحاث مكثفة',  dEn:'8 ingredients after intensive research'},
   {i:'📊', tAr:'جرعات دقيقة',    tEn:'Precise Dosing',    dAr:'كل جرعة محسوبة بدقة',      dEn:'Every dose precisely calculated'},
   {i:'🌍', tAr:'موردون موثوقون', tEn:'Trusted Suppliers', dAr:'مواد من Nootropics Depot',  dEn:'Raw materials from Nootropics Depot USA'}
 ];
@@ -1848,8 +1844,8 @@ function applyLang(){
   document.getElementById('srchi').placeholder  = AR ? 'ابحث عن منتج...' : 'Search products...';
   document.getElementById('ey').textContent     = AR ? 'براند سعودي أصيل 🇸🇦' : 'Authentic Saudi Brand 🇸🇦';
   document.getElementById('h1a').textContent    = AR ? 'طاقة ذهنية طبيعية' : 'Natural Mental Energy';
-  document.getElementById('h1b').textContent    = AR ? 'بلا كافيين • بلا إدمان • بلا حدود بلا مواد صناعية' : 'No Caffeine • No Addiction • No Limits';
-  document.getElementById('hp').textContent     = AR ? 'مكمل تحت الشفة بـ 22 مكوناً طبيعياً للتركيز والطاقة طوال اليوم' : 'Sublingual supplement with 22 natural ingredients for focus and energy all day';
+  document.getElementById('h1b').textContent    = AR ? 'بلا نيكوتين • بلا إدمان • بلا حدود بلا مواد صناعية' : 'No Caffeine • No Addiction • No Limits';
+  document.getElementById('hp').textContent     = AR ? 'مكمل تحت الشفة بـ 8 مكونات طبيعية للتركيز والطاقة طوال اليوم' : 'Sublingual supplement with 22 natural ingredients for focus and energy all day';
   document.getElementById('cshop').textContent  = AR ? 'تسوق الآن' : 'Shop Now';
   document.getElementById('cstory').textContent = AR ? 'قصتنا' : 'Our Story';
   document.getElementById('st1').textContent    = AR ? 'عميل سعيد' : 'Happy Clients';
@@ -1866,7 +1862,7 @@ function applyLang(){
   document.getElementById('chlim').textContent  = AR ? 'محدود' : 'Limited';
   document.getElementById('chnew').textContent  = AR ? 'جديد' : 'New';
   document.getElementById('singr').innerHTML    = AR ? 'مكوناتنا <span>الطبيعية</span>' : 'Natural <span>Ingredients</span>';
-  document.getElementById('ibttl').textContent  = AR ? '22 مكوناً مدعوماً علمياً' : '22 Science-Backed Ingredients';
+  document.getElementById('ibttl').textContent  = AR ? '- مكوناً مدعوماً علمياً' : '- Science-Backed Ingredients';
   document.getElementById('ibsub').textContent  = AR ? 'كل مكون بجرعة مدروسة' : 'Every ingredient at research-proven doses';
   document.getElementById('swhy').innerHTML     = AR ? 'لماذا <span>فجر؟</span>' : 'Why <span>FAJR?</span>';
   document.getElementById('sadvs').innerHTML    = AR ? 'مميزاتنا <span>الحصرية</span>' : 'Exclusive <span>Advantages</span>';
@@ -1882,8 +1878,8 @@ function applyLang(){
   document.getElementById('nb-cntl').textContent= AR ? 'تواصل' : 'Contact';
   document.getElementById('nb-al').textContent  = AR ? 'حسابي' : 'Account';
   document.getElementById('tk1').textContent    = AR ? 'شحن مجاني فوق 200 ريال' : 'Free Shipping above SAR 200';
-  document.getElementById('tk2').textContent    = AR ? '22 مكوناً طبيعياً' : '22 Natural Ingredients';
-  document.getElementById('tk3').textContent    = AR ? 'بلا كافيين ولا إدمان' : 'No caffeine, no addiction';
+  document.getElementById('tk2').textContent    = AR ? '8 مكونات طبيعية' : '8 Natural Ingredients';
+  document.getElementById('tk3').textContent    = AR ? '-' : '-';
   document.getElementById('tk4').textContent    = AR ? 'توصيل 2-4 أيام' : 'Delivery 2-4 days';
   document.getElementById('comttl').textContent = AR ? 'إتمام الطلب' : 'Checkout';
   document.getElementById('cop1').textContent   = AR ? 'المعلومات الشخصية' : 'Personal Information';
