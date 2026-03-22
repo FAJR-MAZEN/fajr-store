@@ -3,145 +3,263 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FAJR - فجر | طاقة ذهنية طبيعية</title>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+  <title>FAJR - متجر فجر</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --orange: #FF6B35;
+      --orange-dark: #e55a2d;
+      --dark: #0B0E1A;
+      --dark2: #111727;
+      --gold: #FFD700;
+      --gray: #e5e5e5;
+      --light: #f8f9fa;
+    }
+
     * { margin:0; padding:0; box-sizing:border-box; }
     body {
       font-family: 'Tajawal', sans-serif;
-      background: linear-gradient(to bottom, #0B0E1A, #141830);
-      color: #fff;
-      min-height: 100vh;
+      background: var(--light);
+      color: #222;
+      line-height: 1.5;
+    }
+
+    /* Header */
+    header {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .top-bar {
+      background: var(--orange);
+      color: white;
+      font-size: 0.9rem;
+      padding: 6px 0;
       text-align: center;
-      padding: 20px;
-      overflow-x: hidden;
     }
-    .sun {
-      font-size: 6rem;
-      margin: 20px 0;
-      animation: glow 4s infinite alternate;
-    }
-    @keyframes glow {
-      from { text-shadow: 0 0 20px #FF6B35; }
-      to   { text-shadow: 0 0 60px #FF9A5C; }
-    }
-    h1 {
-      font-size: 3.5rem;
-      color: #FF6B35;
-      margin-bottom: 10px;
-      text-shadow: 0 0 30px rgba(255,107,53,0.5);
-    }
-    .tagline {
-      font-size: 1.4rem;
-      opacity: 0.9;
-      margin-bottom: 40px;
-    }
-    .product-grid {
+    .main-header {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      max-width: 1100px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px;
+      max-width: 1400px;
       margin: 0 auto;
     }
-    .card {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid #FF6B35;
-      border-radius: 20px;
-      width: 320px;
-      padding: 25px;
-      transition: all 0.4s;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-    }
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 50px rgba(255,107,53,0.3);
-    }
-    .flavor {
-      font-size: 2rem;
-      margin: 15px 0;
+    .logo {
+      font-size: 2.2rem;
       font-weight: 900;
+      color: var(--orange);
     }
-    .price {
-      font-size: 2.5rem;
-      color: #FF6B35;
-      margin: 15px 0;
+    .search-bar {
+      flex: 1;
+      max-width: 600px;
+      margin: 0 30px;
+      position: relative;
     }
-    .desc {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      opacity: 0.85;
-      margin-bottom: 25px;
+    .search-bar input {
+      width: 100%;
+      padding: 12px 20px 12px 50px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
     }
-    .btn {
-      display: block;
-      background: linear-gradient(135deg, #FF6B35, #FF9A5C);
+    .search-bar::before {
+      content: "🔍";
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #777;
+    }
+    .icons {
+      display: flex;
+      gap: 24px;
+      font-size: 1.4rem;
+      color: #444;
+    }
+    .icons span { cursor: pointer; position: relative; }
+    .icons .cart::after {
+      content: "3";
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background: var(--orange);
       color: white;
+      font-size: 0.7rem;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Hero Banner */
+    .hero {
+      background: linear-gradient(90deg, var(--orange) 0%, var(--orange-dark) 100%);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 3.2rem;
+      margin-bottom: 16px;
+    }
+    .hero p {
+      font-size: 1.4rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      opacity: 0.95;
+    }
+    .hero-btn {
+      background: white;
+      color: var(--orange);
       font-size: 1.3rem;
-      padding: 16px 40px;
+      padding: 16px 50px;
       border-radius: 50px;
       text-decoration: none;
-      margin: 15px auto;
-      width: fit-content;
-      transition: all 0.3s;
-      box-shadow: 0 8px 25px rgba(255,107,53,0.4);
+      font-weight: bold;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
     }
-    .btn:hover {
-      transform: scale(1.08);
-      box-shadow: 0 12px 35px rgba(255,107,53,0.6);
+
+    /* Products Section */
+    .section-title {
+      font-size: 2rem;
+      margin: 50px 0 30px;
+      text-align: center;
+      color: var(--orange);
     }
-    .discount {
-      margin-top: 40px;
-      font-size: 1.3rem;
-      color: #FFD700;
-      opacity: 0.9;
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+      max-width: 1400px;
+      margin: 0 auto 80px;
+      padding: 0 20px;
     }
-    footer {
-      margin-top: 60px;
-      font-size: 1rem;
-      opacity: 0.7;
+    .product {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
-    @media (max-width: 700px) {
-      .product-grid { flex-direction: column; align-items: center; }
-      h1 { font-size: 2.8rem; }
-      .sun { font-size: 5rem; }
+    .product:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+    .product img {
+      width: 100%;
+      height: 240px;
+      object-fit: contain;
+      background: #f8f9fa;
+    }
+    .info {
+      padding: 16px;
+    }
+    .name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      height: 44px;
+      overflow: hidden;
+    }
+    .price {
+      font-size: 1.4rem;
+      color: var(--orange);
+      font-weight: 800;
+    }
+    .old-price {
+      color: #999;
+      text-decoration: line-through;
+      font-size: 0.95rem;
+      margin-right: 10px;
+    }
+    .add-btn {
+      margin-top: 12px;
+      background: var(--orange);
+      color: white;
+      border: none;
+      padding: 10px 0;
+      width: 100%;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .main-header { flex-wrap: wrap; gap: 15px; }
+      .search-bar { margin: 0; order: 3; width: 100%; }
+      .hero h2 { font-size: 2.2rem; }
     }
   </style>
 </head>
 <body>
 
-  <div class="sun">🌅</div>
-  <h1>FAJR</h1>
-  <p class="tagline">طاقة ذهنية طبيعية • امتصاص فوري تحت الشفة • بدون مواد ضارة</p>
-
-  <div class="product-grid">
-    <!-- منتج 1 -->
-    <div class="card">
-      <div class="flavor">آيس مينت</div>
-      <div class="price">٤٥ ريال</div>
-      <p class="desc">
-        إحساس ثلج منعش + تركيز حاد طوال اليوم<br>
-        ٨ مكونات طبيعية مدروسة علميًا
-      </p>
-      <a href="https://wa.me/966548659564?text=أريد%20طلب%20علبة%20FAJR%20آيس%20مينت%20(45%20ريال)" class="btn">اطلب الآن عبر واتساب</a>
-    </div>
-
-    <!-- منتج 2 -->
-    <div class="card">
-      <div class="flavor">ليمون وزنجبيل</div>
-      <div class="price">٤٥ ريال</div>
-      <p class="desc">
-        طاقة حارة منشطة + وضوح ذهني قوي<br>
-        تركيبة سعودية أصيلة ١٠٠٪ طبيعية
-      </p>
-      <a href="https://wa.me/966548659564?text=أريد%20طلب%20علبة%20FAJR%20ليمون%20وزنجبيل%20(45%20ريال)" class="btn">اطلب الآن عبر واتساب</a>
-    </div>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    شحن مجاني للطلبات فوق 200 ريال • كود خصم: FAJR10
   </div>
 
-  <p class="discount">كود خصم: <strong>FAJR10</strong> (خصم ١٠٪ على أي طلب)</p>
+  <!-- Header -->
+  <header>
+    <div class="main-header">
+      <div class="logo">FAJR</div>
+      <div class="search-bar">
+        <input type="text" placeholder="ابحث عن منتجات فجر...">
+      </div>
+      <div class="icons">
+        <span>♡</span>
+        <span class="cart">🛒</span>
+        <span>👤</span>
+      </div>
+    </div>
+  </header>
 
-  <footer>
-    شحن مجاني فوق ٢٠٠ ريال • للاستفسار: +966 548 659 564
+  <!-- Hero -->
+  <section class="hero">
+    <h2>FAJR – طاقة ذهنية طبيعية 100%</h2>
+    <p>باوتشات تحت الشفة • تركيز فوري • بدون كافيين زائد • نكهتين مميزتين</p>
+    <a href="#products" class="hero-btn">تسوق الآن</a>
+  </section>
+
+  <!-- Products -->
+  <section id="products">
+    <h2 class="section-title">منتجاتنا المميزة</h2>
+    <div class="products-grid">
+      <div class="product">
+        <img src="https://via.placeholder.com/300x240/FF6B35/fff?text=آيس+مينت" alt="آيس مينت">
+        <div class="info">
+          <div class="name">FAJR – آيس مينت</div>
+          <div>
+            <span class="price">٤٥ ريال</span>
+            <span class="old-price">٥٩ ريال</span>
+          </div>
+          <button class="add-btn">أضف إلى السلة</button>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="https://via.placeholder.com/300x240/FF9A5C/fff?text=ليمون+وزنجبيل" alt="ليمون وزنجبيل">
+        <div class="info">
+          <div class="name">FAJR – ليمون وزنجبيل</div>
+          <div>
+            <span class="price">٤٥ ريال</span>
+            <span class="old-price">٥٩ ريال</span>
+          </div>
+          <button class="add-btn">أضف إلى السلة</button>
+        </div>
+      </div>
+
+      <!-- يمكن تكرار الكروت هنا لإضافة المزيد -->
+    </div>
+  </section>
+
+  <footer style="background:var(--dark); color:#aaa; padding:60px 20px; text-align:center; margin-top:80px;">
+    <p style="font-size:1.4rem; color:var(--orange); margin-bottom:20px;">FAJR – طاقة سعودية أصيلة</p>
+    <p>© 2026 FAJR جميع الحقوق محفوظة</p>
   </footer>
 
 </body>
