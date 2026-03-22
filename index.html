@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5">
 <meta name="theme-color" content="#070B14">
 <meta name="description" content="فجر FAJR — باوتش طاقة ذهنية. آيس مينت وليمون وزنجبيل. براند سعودي أصيل.">
-<title>فجر | FAJR — طاقة ذهنية طبيعية 100%</title>
+<title>فجر | FAJR — طاقة ذهنية قوية 100%</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800;900&display=swap" rel="stylesheet">
@@ -447,12 +447,12 @@ canvas#sky{position:fixed;inset:0;z-index:0;pointer-events:none}
 <div class="ticker-wrap">
   <div class="ticker">
     <span>شحن مجاني فوق 200 ريال 🚚</span>
-    <span>8 مكوناً طبيعياً 🌿</span>
+    <span>8 مكوناً قويا 🌿</span>
     <span>كود <b>FAJR10</b> للحصول على خصم 10% 🎁</span>
     <span>توصيل 2-4 أيام ⚡</span>
     <span>براند سعودي أصيل 🇸🇦</span>
     <span>شحن مجاني فوق 200 ريال 🚚</span>
-    <span>8 مكوناً طبيعياً 🌿</span>
+    <span>8 مكوناً قويا 🌿</span>
     <span>كود <b>FAJR10</b> للحصول على خصم 10% 🎁</span>
     <span>توصيل 2-4 أيام ⚡</span>
     <span>براند سعودي أصيل 🇸🇦</span>
@@ -473,26 +473,22 @@ canvas#sky{position:fixed;inset:0;z-index:0;pointer-events:none}
     </div>
   </div>
   <nav class="hnav">
-    <button class="ni on" data-pg="home" id="ni-home" onclick="navClick(this,'home')">الرئيسية</button>
-    <button class="ni" data-pg="wishlist" id="ni-wish" onclick="navClick(this,'wishlist')">المفضلة</button>
-    <button class="ni" data-pg="track" id="ni-track" onclick="navClick(this,'track')">الطلبات</button>
-    <button class="ni" data-pg="contact" id="ni-cnt" onclick="navClick(this,'contact')">تواصل</button>
-    <button class="ni" data-pg="about" id="ni-abt" onclick="navClick(this,'about')">عن فجر</button>
+   
   </nav>
 </header>
 <main>
 <div class="pg on" id="pg-home">
 <section class="hero">
   <div class="heyebrow"><span class="hdot"></span><span id="ey">براند سعودي أصيل 🇸🇦</span></div>
-  <h1 class="hh1"><span class="gr" id="h1a">طاقة ذهنية طبيعية</span><span class="sub" id="h1b">بلا مواد صناعية • امتصاص فوري تحت الشفة</span></h1>
-  <p class="hp" id="hp">باوتش طاقة بـ 8 مكونات طبيعية للتركيز والطاقة طوال اليوم</p>
+  <h1 class="hh1"><span class="gr" id="h1a">طاقة ذهنية وبدنية</span><span class="sub" id="h1b">• امتصاص فوري تحت الشفة</span></h1>
+  <p class="hp" id="hp">باوتش طاقة بـ 8 مكونات  للتركيز والطاقة طوال اليوم</p>
   <div class="hctas">
     <button class="btnp" id="cshop" onclick="scrollToProd()">تسوق الآن</button>
     <button class="btng" id="cstory" onclick="goPg('about')">قصتنا</button>
   </div>
   <div class="hstats">
     <div><span class="stn">335+</span><span class="stl" id="st1">عميل سعيد</span></div>
-    <div><span class="stn">8</span><span class="stl" id="st2">مكون طبيعي</span></div>
+    <div><span class="stn">8</span><span class="stl" id="st2">مكون قوي</span></div>
     <div><span class="stn">⭐3.6</span><span class="stl" id="st3">التقييم العام</span></div>
     <div><span class="stn">2-4</span><span class="stl" id="st4">أيام توصيل</span></div>
   </div>
@@ -505,21 +501,12 @@ canvas#sky{position:fixed;inset:0;z-index:0;pointer-events:none}
 <section id="prod-anchor">
   <div class="sh"><h2 class="sht" id="spttl">منتجاتنا <span>المميزة</span></h2></div>
   <div class="chips">
-    <button class="chip on" id="chall" onclick="filterCat(this,'all')">الكل</button>
-    <button class="chip" id="chbasic" onclick="filterCat(this,'basic')">أساسي</button>
-    <button class="chip" id="chprem" onclick="filterCat(this,'premium')">فاخر</button>
-    <button class="chip" id="chlim" onclick="filterCat(this,'limited')">محدود</button>
-    <button class="chip" id="chnew" onclick="filterCat(this,'new')">جديد</button>
-  </div>
-  <div class="pgrid" id="pgrid"></div>
-  <p id="nores" style="display:none;text-align:center;padding:30px;color:var(--muted)">لا توجد نتائج</p>
-</section>
-<section>
+   
   <div class="drinks-sep"><div class="drinks-sep-line"></div><span class="drinks-sep-lbl">FAJR DRINKS 🥤 — قريباً</span><div class="drinks-sep-line"></div></div>
   <div class="pgrid" id="dgrid"></div>
 </section>
 <section>
-  <div class="sh"><h2 class="sht" id="singr">مكوناتنا <span>الطبيعية</span></h2></div>
+  <div class="sh"><h2 class="sht" id="singr">مكوناتنا <span>.</span></h2></div>
   <div class="ingr-box">
     <div class="ingr-ttl"><strong id="ibttl">8 مكونات مدعومة علمياً</strong><span id="ibsub">كل مكون بجرعة مدروسة</span></div>
     <div class="ichips" id="ichips"></div>
@@ -540,7 +527,7 @@ canvas#sky{position:fixed;inset:0;z-index:0;pointer-events:none}
 <div class="vgrid" id="vgrid"></div>
 <footer id="ft">
   <div class="ft-inner">
-    <div><div class="ft-logo">🌅</div><div class="ft-bname" id="ft-brand">فجر | FAJR</div><div class="ft-desc" id="ft-desc">براند سعودي أصيل للطاقة الذهنية الطبيعية.</div></div>
+    <div><div class="ft-logo">🌅</div><div class="ft-bname" id="ft-brand">فجر | FAJR</div><div class="ft-desc" id="ft-desc">براند سعودي أصيل للطاقة الذهنية القوية</div></div>
     <div><div class="ft-h" id="ft-contact-h">تواصل معنا</div><a href="https://wa.me/966548659564" target="_blank" class="ft-link">📱 +966 548 659 564</a><a href="/cdn-cgi/l/email-protection#3452555e46070c030d0d745359555d581a575b59" class="ft-link">✉️ <span class="__cf_email__" data-cfemail="7b1d1a110948434c42423b1c161a121755181416">[email&#160;protected]</span></a></div>
     <div><div class="ft-h" id="ft-links-h">روابط سريعة</div><button class="ft-link" onclick="goPg('home')" id="ft-l1">الرئيسية</button><button class="ft-link" onclick="goPg('about')" id="ft-l2">عن فجر</button><button class="ft-link" onclick="goPg('track')" id="ft-l3">تتبع طلبك</button><button class="ft-link" onclick="goPg('contact')" id="ft-l4">اتصل بنا</button></div>
   </div>
@@ -739,7 +726,7 @@ var DRINKS=[
 ];
 var INGRS=['L-Theanine','L-Tyrosine','Alpha-GPC','Taurine','B12','Niacin','Cellulose . Xanthan'];
 var FEATS_DATA=[
-  {i:'🌿',tAr:'طبيعي 100%',tEn:'100% Natural',dAr:'مكونات معتمدة',dEn:'Certified ingredients'},
+  {i:'🌿',tAr:'نقي 100%',tEn:'100% Natural',dAr:'مكونات معتمدة',dEn:'Certified ingredients'},
   {i:'⚡',tAr:'امتصاص فوري',tEn:'Instant Absorption',dAr:'تحت الشفة',dEn:'Sublingual delivery'},
   {i:'🧠',tAr:'وضوح ذهني',tEn:'Mental Clarity',dAr:'تركيز وإبداع',dEn:'Focus & creativity'},
   {i:'🔬',tAr:'مدعوم علمياً',tEn:'Science-Backed',dAr:'جرعات مدروسة',dEn:'Evidence-based doses'},
@@ -754,14 +741,14 @@ var WHY_DATA=[
   {i:'🌍',tAr:'موردون موثوقون',tEn:'Trusted Suppliers',dAr:'مواد من Nootropics Depot',dEn:'Nootropics Depot USA'}
 ];
 var GREVS=[
-  {n:'Ahmed Al-Mutairi',av:'A',s:5,bAr:'آيس مينت خرافي! التركيز ارتفع بشكل واضح',bEn:'Ice Mint is amazing! Focus improved noticeably',p:'Ice Mint'},
+  {n:'احمد-Mutairi',av:'A',s:5,bAr:'آيس مينت خرافي! التركيز ارتفع بشكل واضح',bEn:'Ice Mint is amazing! Focus improved noticeably',p:'Ice Mint'},
   {n:'Sara Al-Zahrani',av:'S',s:5,bAr:'أفضل شيء جربته — النعناع منعش جداً',bEn:'Best thing I tried — so refreshing',p:'Ice Mint'},
-  {n:'Mohammed Al-Otaibi',av:'M',s:5,bAr:'ليمون وزنجبيل قوي جداً — يستاهل كل ريال',bEn:'Lemon & Ginger is powerful — worth every riyal',p:'Lemon & Ginger'},
-  {n:'Khalid Al-Qahtani',av:'K',s:5,bAr:'اشتريت 3 وأهديت 2 — الكل أعجبه',bEn:'Bought 3, gifted 2 — everyone loved it',p:'Ice Mint'},
-  {n:'Noura Al-Harbi',av:'N',s:5,bAr:'سريع التأثير ونكهة الليمون رائعة',bEn:'Fast-acting and lemon flavor is great',p:'Lemon & Ginger'}
+  {n:'Mohammed',av:'M',s:5,bAr:'ليمون وزنجبيل قوي جداً — يستاهل كل ريال',bEn:'Lemon & Ginger is powerful — worth every riyal',p:'Lemon & Ginger'},
+  {n:'كنق خالد',av:'K',s:5,bAr:'اشتريت 3 وأهديت 2 — الكل أعجبه',bEn:'Bought 3, gifted 2 — everyone loved it',p:'Ice Mint'},
+  {n:'نورو',av:'N',s:5,bAr:'سريع التأثير ونكهة الليمون رائعة',bEn:'Fast-acting and lemon flavor is great',p:'Lemon & Ginger'}
 ];
 var VALS=[
-  {i:'🌿',tAr:'طبيعي 100%',tEn:'100% Natural',dAr:'بدون مواد اصطناعية',dEn:'No synthetic ingredients'},
+  {i:'🌿',tAr:'نقي 100%',tEn:'100% Natural',dAr:'.',dEn:'No synthetic ingredients'},
   {i:'🔬',tAr:'مدعوم علمياً',tEn:'Science-Backed',dAr:'أبحاث مثبتة',dEn:'Proven research'},
   {i:'🇸🇦',tAr:'هوية سعودية',tEn:'Saudi Identity',dAr:'براند أصيل',dEn:'Authentic brand'},
   {i:'💚',tAr:'آمن',tEn:'Safe',dAr:'آمن تماماً',dEn:'Completely safe'}
@@ -961,15 +948,15 @@ function applyLang(){
   t('lbtn','EN','AR');t('lname','فجر','FAJR');
   document.getElementById('srchi').placeholder=AR?'ابحث عن منتج...':'Search products...';
   t('ey','براند سعودي أصيل 🇸🇦','Authentic Saudi Brand 🇸🇦');
-  t('h1a','طاقة ذهنية طبيعية','Natural Mental Energy');
+  t('h1a','طاقة ذهنية وبدنية','Natural Mental Energy');
   t('h1b','بلا مواد صناعية • امتصاص فوري تحت الشفة','No Synthetic • Instant Sublingual Absorption');
-  t('hp','باوتش طاقة بـ 8 مكونات طبيعية للتركيز والطاقة طوال اليوم','Energy pouches with 8 natural ingredients for focus and energy all day');
+  t('hp','باوتش طاقة بـ 8 مكونات  للتركيز والطاقة طوال اليوم','Energy pouches with 8 natural ingredients for focus and energy all day');
   t('cshop','تسوق الآن','Shop Now');t('cstory','قصتنا','Our Story');
-  t('st1','عميل سعيد','Happy Clients');t('st2','مكون طبيعي','Natural Ingredients');t('st3','التقييم العام','Overall Rating');t('st4','أيام توصيل','Day Delivery');
+  t('st1','عميل سعيد','Happy Clients');t('st2','مكون قوي','Natural Ingredients');t('st3','التقييم العام','Overall Rating');t('st4','أيام توصيل','Day Delivery');
   t('ftl','عرض الإطلاق المحدود','Limited Launch Offer');t('fsub','كود FAJR10 للحصول على خصم 10%','Use code FAJR10 for 10% off');t('fcta','تسوق','Shop');
   h('spttl','منتجاتنا <span>المميزة</span>','Featured <span>Products</span>');
   t('chall','الكل','All');t('chbasic','أساسي','Basic');t('chprem','فاخر','Premium');t('chlim','محدود','Limited');t('chnew','جديد','New');
-  h('singr','مكوناتنا <span>الطبيعية</span>','Natural <span>Ingredients</span>');
+  h('singr','مكوناتنا <span>.</span>','Natural <span>Ingredients</span>');
   t('ibttl','8 مكونات مدعومة علمياً','8 Science-Backed Ingredients');t('ibsub','كل مكون بجرعة مدروسة','Every ingredient at research-proven doses');
   h('swhy','لماذا <span>فجر؟</span>','Why <span>FAJR?</span>');h('sadvs','مميزاتنا <span>الحصرية</span>','Exclusive <span>Advantages</span>');h('srevs','آراء <span>عملائنا</span>','Customer <span>Reviews</span>');
   t('ni-home','الرئيسية','Home');t('ni-wish','المفضلة','Wishlist');t('ni-track','الطلبات','Orders');t('ni-cnt','تواصل','Contact');t('ni-abt','عن فجر','About');
@@ -1004,7 +991,7 @@ function applyLang(){
   t('revttl','التقييمات','Reviews');t('revwl','اكتب تقييمك','Write your review');t('rvsub','نشر','Post');
   document.getElementById('rvnm').placeholder=AR?'اسمك':'Your name';document.getElementById('rvbd').placeholder=AR?'شاركنا تجربتك...':'Share your experience...';
   t('pdmadd','أضف للسلة','Add to Cart');
-  t('ft-brand','فجر | FAJR','FAJR | فجر');t('ft-desc','براند سعودي أصيل للطاقة الذهنية الطبيعية.','Authentic Saudi brand for natural mental energy.');
+  t('ft-brand','فجر | FAJR','FAJR | فجر');t('ft-desc','براند سعودي أصيل للطاقة الذهنية القوية.','Authentic Saudi brand for natural mental energy.');
   t('ft-contact-h','تواصل معنا','Contact Us');t('ft-links-h','روابط سريعة','Quick Links');
   t('ft-l1','الرئيسية','Home');t('ft-l2','عن فجر','About FAJR');t('ft-l3','تتبع طلبك','Track Order');t('ft-l4','اتصل بنا','Contact');
   t('ft-cert-t','شهادة العمل الحر','Freelance Work Certificate');t('ft-cert-v','رقم الشهادة: FL-2024-FAJR-38799','Certificate No: FL-2024-FAJR-38799');
