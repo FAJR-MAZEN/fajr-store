@@ -868,8 +868,8 @@ document.addEventListener('DOMContentLoaded',function(){
   function hideLdr(){var l=document.getElementById('ldr');if(l)l.classList.add('hide');}
   setTimeout(hideLdr,800);
   setTimeout(hideLdr,2500);
-  try{renderAll();}catch(e){console.error('renderAll:',e);hideLdr();}
-  try{initScrollReveal();}catch(e){}
+try{renderAll();}catch(e){console.error('renderAll ERROR:',e);hideLdr();}
+hideLdr();  try{initScrollReveal();}catch(e){}
   try{loadWishFromStorage();}catch(e){}
 });
 
