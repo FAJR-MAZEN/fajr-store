@@ -48,7 +48,13 @@ input,select,textarea{font-family:inherit;outline:none}
 img{max-width:100%;height:auto}
 
 /* LOADER */
-#ldr{position:fixed;inset:0;z-index:9999;background:var(--bg);display:flex;align-items:center;justify-content:center;flex-direction:column;transition:opacity .5s,visibility .5s}
+#ldr{
+  display:none !important;
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  ...
+}background:var(--bg);align-items:center;justify-content:center;flex-direction:column;transition:opacity .5s,visibility .5s}
 #ldr.hide{opacity:0;visibility:hidden;pointer-events:none}
 .lring{width:60px;height:60px;border:3px solid rgba(255,60,172,.2);border-top-color:var(--brand);border-radius:50%;animation:spin 1s linear infinite;margin-bottom:16px}
 .llogo{font-size:42px;font-weight:900;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:4px}
